@@ -18,6 +18,22 @@ export default function RestaurantProvider({children}) {
         "type":"Italian",
         "parking":false,
         "image":"https://example.com/pastaparadise.jpg"
+        },
+        {
+        id:3,
+        name:"Sushi World",
+        "address":"789 Ocean Blvd, Fish Town",
+        "type":"Japanese",
+        "parking":true,
+        "image":"https://example.com/sushiworld.jpg"
+        },
+        {
+        id:4,
+        name:"Burger Barn",
+        "address":"321 Grill Rd, Meat City",
+        "type":"American",
+        "parking":false,
+        "image":"https://example.com/burgerbarn.jpg"
         }
     ]);
     

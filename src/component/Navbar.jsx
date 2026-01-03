@@ -31,5 +31,5 @@ const navbarStyle = {
     padding: "10px",
     backgroundColor: "#1e293b",
     alignItems: "center",
-    color: "white"
+    color: "white",
 };

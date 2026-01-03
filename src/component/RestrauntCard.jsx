@@ -14,8 +14,8 @@ export default function RestrauntCard({data,isAdmin}) {
       <p>{data.parking ? "Parking Available" : "No Parking"}</p>
       {isAdmin && (
         <div>
-          <button onClick={() => navigate(`/admin/update/${data.id}`)}>Update</button>
-          <button onClick={() => deleteRestraunt(data.id)}>Delete</button>
+          <button style={btnstyle} onClick={() => navigate(`/admin/update/${data.id}`)}>Update</button>
+          <button style={btnstyle} onClick={() => deleteRestraunt(data.id)}>Delete</button>
         </div>
       )}
     </div>
@@ -27,3 +27,12 @@ const card={
     padding:"10px",
     textAlign:"center"
 }   
+const btnstyle={
+    marginRight:"10px",
+    backgroundColor:"blue",
+    color:"white",
+    border:"none",
+    padding:"5px 10px",
+    borderRadius:"3px",
+    cursor:"pointer"
+}
