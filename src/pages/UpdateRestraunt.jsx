@@ -5,11 +5,11 @@ export default function UpdateRestraunt() {
     const {id}= useParams();
     const {restraunts,updateRestraunt}= useContext(RestaurantContext);
     const navigate= useNavigate();
-    const restrantData=restraunts.find(a=>a.restrauntsId===Number(id));
+    const restrantData=restraunts.find(a=>a.id===Number(id));
 
     const [name,setName]= useState(restrantData.name);
     function handleSubmit(){
-        updateRestraunt(restrantData.restrauntsId,{name});
+        updateRestraunt(restrantData.id,{name});
         navigate("/admin/dashboard");
     }
   return (

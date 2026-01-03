@@ -20,26 +20,18 @@ export default function RestaurantProvider({children}) {
         "image":"https://example.com/pastaparadise.jpg"
         }
     ]);
-    useEffect(()=>{
-        const data=JSON.parse(localStorage.getItem("restraunts")) || [];
-        setRestaurants(data);
-    },[])
-
-    function save(data){
-        localStorage.setItem("restraunts",JSON.stringify(data));
-        setRestaurants(data);
-    }
-    function addRestraunt(data){
-        save([...restraunts,data]);
-    }
+    
     function deleteRestraunt(id){
         save(restraunts.filter(a=>a.id!==id));
     }
     function updateRestraunt(id,updatedData){
-        save(restraunts.map(a=>a.id===id ? {...a,...updatedData} : a));
+        setRestaurants(
+            restraunts.map(a=>a.id===id ? {...a,...updatedData} : a)
+        )
     }
+   
   return (
-    <RestaurantContext.Provider value={{restraunts,addRestraunt,deleteRestraunt,updateRestraunt}}>
+    <RestaurantContext.Provider value={{restraunts,deleteRestraunt,updateRestraunt}}>
       {children}
    </RestaurantContext.Provider>
   )
