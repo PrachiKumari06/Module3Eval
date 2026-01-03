@@ -6,7 +6,7 @@ export default function RestrauntCard({data,isAdmin}) {
     const {deleteRestraunt} = useContext(RestaurantContext);
     const navigate = useNavigate();
   return (
-    <div className='card'>
+    <div style={card}>
         <img src={data.image} alt={data.name} width="200" />
       <h2>{data.name}</h2>
       <p>{data.address}</p>
@@ -21,3 +21,9 @@ export default function RestrauntCard({data,isAdmin}) {
     </div>
   )
 }
+const card={
+    border:"1px solid gray",
+    borderRadius:"5px",
+    padding:"10px",
+    textAlign:"center"
+}   

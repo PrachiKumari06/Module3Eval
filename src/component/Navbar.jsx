@@ -10,7 +10,7 @@ export default function Navbar() {
         navigate("/");
     }
   return (
-    <nav style={{display:"flex",justifyContent:"space-around",border:"1px solid black",padding:"10px"}}>
+    <nav style={navbarStyle}>
 <h3>Restraunt App</h3>
 <div>
     {!role && (<Link to="/">Login</Link>)}
@@ -23,3 +23,13 @@ export default function Navbar() {
     </nav>
   )
 }
+
+const navbarStyle = {
+    display: "flex",
+    justifyContent: "space-between ",
+    border: "1px solid black",
+    padding: "10px",
+    backgroundColor: "#1e293b",
+    alignItems: "center",
+    color: "white"
+};

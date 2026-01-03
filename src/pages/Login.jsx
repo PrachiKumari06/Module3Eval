@@ -16,10 +16,20 @@ export default function Login() {
         }
     }
   return (
-    <>
+    <div style={logstyle}>
       <input type="text" placeholder='Email' value={email} onChange={(e)=>setEmail(e.target.value)}/>
       <input type="password" placeholder='Password' value={password} onChange={(e)=>setPassword(e.target.value)}/>
       <button onClick={handleSubmit}>Login</button>
-    </>
+    </div>
   )
+}
+const logstyle={
+    display:"flex",
+    flexDirection:"column",
+    width:"400px",
+    margin:"100px auto",
+    gap:"10px",
+    padding:"20px",
+    border:"1px solid black",
+    borderRadius:"5px",
 }
